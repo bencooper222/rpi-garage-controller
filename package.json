@@ -1,0 +1,22 @@
+{
+  "name": "rpi-garage-controller",
+  "version": "1.0.0",
+  "description": "Interface with Garage and expose smart home functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencooper222/rpi-garage-controller.git"
+  },
+  "author": "Benjamin Cooper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bencooper222/rpi-garage-controller/issues"
+  },
+  "homepage": "https://github.com/bencooper222/rpi-garage-controller#readme",
+  "dependencies": {
+    "rpio": "^2.1.1"
+  }
+}
