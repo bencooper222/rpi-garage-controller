@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/bencooper222/rpi-garage-controller#readme",
   "dependencies": {
-    "rpio": "^2.1.1"
+    "onoff": "^6.0.0"
   }
 }
