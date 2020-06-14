@@ -1,5 +1,6 @@
-const Gpio = require("onoff").Gpio;
-const { control: controlPin } = require("./gpioMapping");
+import { Gpio } from "onoff";
+
+import { control as controlPin } from "./gpioMapping";
 
 const triggerGarage = async () => {
   const control = new Gpio(controlPin, "out");
@@ -10,7 +11,7 @@ const triggerGarage = async () => {
   control.unexport();
 };
 
-async function wait(ms) {
+async function wait(ms: number) {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });

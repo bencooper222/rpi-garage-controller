@@ -1,11 +1,11 @@
-const Gpio = require("onoff").Gpio;
-const {
-  downStatus: downStatusPin,
-  upStatus: upStatusPin,
-} = require("./gpioMapping");
+import { Gpio } from "onoff";
+import {
+  downStatus as downStatusPin,
+  upStatus as upStatusPin,
+} from "./gpioMapping";
 
 // which should be "down" or "up"
-const getReedSwitchStatus = async (which) => {
+const getReedSwitchStatus = async (which: "down" | "up"): Promise<boolean> => {
   if (which !== "down" && which !== "up")
     throw new Error("not valid Reed switch!");
 
@@ -20,7 +20,7 @@ const getReedSwitchStatus = async (which) => {
 };
 
 // valid returns are "up", "down", "transitioning"
-const getGarageStatus = async () => {
+const getGarageStatus = async (): Promise<"up" | "down" | "transitioning"> => {
   const upStatus = await getReedSwitchStatus("up");
   const downStatus = await getReedSwitchStatus("down");
 
