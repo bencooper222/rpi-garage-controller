@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "open": "ts-node lib/openclose.ts" 
+    "open": "ts-node lib/gpio/openclose.ts",
+    "start": "ts-node lib/index.ts"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,11 @@
   },
   "homepage": "https://github.com/bencooper222/rpi-garage-controller#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "onoff": "^6.0.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.8",
     "@types/node": "^14.0.13",
     "ts-node": "^9.0.0",
     "typescript": "^3.9.5"
