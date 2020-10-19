@@ -1,3 +1,3 @@
 npm run transpile
 
-npx supervisor lib/index.ts
+npx supervisor dist/index.js
