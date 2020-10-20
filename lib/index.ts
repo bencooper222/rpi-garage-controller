@@ -1,5 +1,5 @@
 import express from "express";
-import { toggleGarage } from "./gpio";
+import { toggleGarage, watchButton } from "./gpio";
 const app = express();
 
 const port = 80;
@@ -12,3 +12,5 @@ app.get("/", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server started`);
 });
+
+watchButton();
