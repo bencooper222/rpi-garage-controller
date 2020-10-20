@@ -1,7 +1,7 @@
 import { Gpio } from "onoff";
 import { button as buttonPin } from "./gpioMapping";
 export const watchButton = () => {
-  const button = new Gpio(buttonPin, "in", "rising", { debounceTimeout: 10 });
+  const button = new Gpio(buttonPin, "in", "rising", { debounceTimeout: 500 });
 
   button.watch((err, value) => {
     if (err) throw err;
@@ -11,5 +11,6 @@ export const watchButton = () => {
 
   process.on("SIGINT", () => {
     button.unexport();
+    process.exit(0);
   });
 };
